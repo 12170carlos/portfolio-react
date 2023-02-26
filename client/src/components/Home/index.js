@@ -4,6 +4,7 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Logo from './Logo'
+import Loader from 'react-loaders'
 
 const Home = () => {
 
@@ -12,7 +13,7 @@ const Home = () => {
     const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.'];
 
     useEffect(() => {
-         setTimeout(() => {
+        setTimeout(() => {
             setLetterClass('text-animate-hover') 
         }, 4000)
     }, [])
@@ -40,10 +41,13 @@ const Home = () => {
                             idx={22} />
                     </h1>
                     <h2>Frontend Developer / JavaScript Profeciency</h2>
-                    <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    <Link to="/contact" className='flat-button'>
+                        CONTACT ME
+                    </Link>
                 </div>
                 <Logo />
             </div>
+            <Loader type='pacman'/>
         </>
     )
 }

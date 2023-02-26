@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-import Logo from '../Home/Logo';
 import Sidebar from '../Sidebar';
 import './index.scss';
 
@@ -19,7 +18,7 @@ const Layout = () => {
                 </span>
 
             </div>
-            <Logo />
+           
         </div>
     )
 }
